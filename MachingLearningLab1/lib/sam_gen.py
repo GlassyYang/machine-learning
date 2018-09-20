@@ -11,35 +11,32 @@ from time import time
 
 class SamGen(object):
     def __init__(self):
-        # 测试样本的数量
-        self.test_sample = 10
-        # 验证样本的数量
-        self.vali_sample = 30
+        self.file = None
+        self.num = 0
+
+    # 为生成器设置参数
+    def set_para(self, file, num):
+        self.file = file
+        self.num = num
 
     # 生成器，用于生成样本数据
     def _gen_sin2pix(self, size):
         np.random.seed(int(time()))
         noi = np.random.randn(size)
-        ran_x = np.random.uniform(0,2, size)
+        ran_x = np.random.uniform(0, 2, size)
         for i in range(size):
-            yield ran_x[i], math.sin(2 * math.pi * (ran_x[i] + noi[i]))
+            yield ran_x[i], 10 * math.sin(2 * math.pi * (ran_x[i]))
         return
 
     # 将生成的数据写入文件中
-    def _gen_sample(self, file, size):
-        file = open(file, 'w');
+    def gen_sample(self):
+        file = open(self.file, 'w')
         if not file:
             print('[-]create test sample file failed.')
             exit(1)
-        for x, y in self._gen_sin2pix(size):
+        for x, y in self._gen_sin2pix(self.num):
             file.write(str(x) + '\t' + str(y) + '\n')
-        file.close();
-        return
-
-    # 调用函数生成样本数据并写入到文件
-    def gen(self):
-        self._gen_sample('text_sample.txt',self.test_sample)
-        self._gen_sample('validate_sample.txt', self.vali_sample)
+        file.close()
         return
 
 
