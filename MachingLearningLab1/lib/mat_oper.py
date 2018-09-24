@@ -8,6 +8,8 @@
 
 from matplotlib import pyplot as plt
 from math import fabs
+
+
 # 从生成的数据文件中读出数据并转换成数据
 def data_deal(obj, file):
     fp = open(file, 'r')
@@ -38,12 +40,6 @@ def data_deal(obj, file):
 # 计算两个矩阵的乘法
 def mat_multi(x, y):
     assert len(x[0]) == len(y)
-    # print(len(x))
-    # for v in x:
-    #     print(len(v))
-    # print(len(y))
-    # for v in y:
-    #     print(len(v))
     ans = []
     for k in range(len(x)):
         row = []

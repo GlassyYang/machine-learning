@@ -25,7 +25,7 @@ class SamGen(object):
         noi = np.random.randn(size)
         ran_x = np.random.uniform(0, 2, size)
         for i in range(size):
-            yield ran_x[i], 10 * math.sin(2 * math.pi * (ran_x[i]))
+            yield ran_x[i], math.sin(2 * math.pi * (ran_x[i])) + noi
         return
 
     # 将生成的数据写入文件中

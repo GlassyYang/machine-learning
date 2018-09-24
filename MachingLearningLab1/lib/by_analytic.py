@@ -31,7 +31,10 @@ class Analytic(object):
         for i in range(self.dim):
             mat_i.append([])
             for j in range(self.dim):
-                if i == j:
+                # 这儿分段的原因是，既要乘以系数，同时也要去除掉w0的系数。给其直接乘以1就行
+                if i == j and i == 0:
+                    mat_i[i].append(1)
+                elif i == j:
                     mat_i[i].append(lam)
                 else:
                     mat_i[i].append(0)
