@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b583873-1f6b-4ed7-b8b0-1c673e032719" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachingLearningLab1/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/MachingLearningLab1/README.MD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachingLearningLab1/lib/by_grad_decrease.py" beforeDir="false" afterPath="$PROJECT_DIR$/MachingLearningLab1/lib/by_grad_decrease.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachingLearningLab1/lib/mat_oper.py" beforeDir="false" afterPath="$PROJECT_DIR$/MachingLearningLab1/lib/mat_oper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachingLearningLab1/lib/sam_gen.py" beforeDir="false" afterPath="$PROJECT_DIR$/MachingLearningLab1/lib/sam_gen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachingLearningLab1/terminal.py" beforeDir="false" afterPath="$PROJECT_DIR$/MachingLearningLab1/terminal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachingLearningLab1/train_sample.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MachingLearningLab1/train_sample.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +26,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="MD" value="799" />
+          <entry key="MD" value="908" />
           <entry key="Python Console" value="461" />
           <entry key="dummy" value="11" />
           <entry key="py" value="17583" />
@@ -39,21 +34,21 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="799" />
+          <entry key="Markdown" value="908" />
           <entry key="PLAIN_TEXT" value="11" />
           <entry key="Python" value="18044" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="MD" value="2" />
+          <entry key="MD" value="3" />
           <entry key="py" value="16" />
           <entry key="txt" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Markdown" value="2" />
+          <entry key="Markdown" value="3" />
           <entry key="PLAIN_TEXT" value="10" />
           <entry key="Python" value="16" />
         </counts>
@@ -76,12 +71,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MachingLearningLab1/README.MD">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="320">
                 <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.MD">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor>
+                <caret column="59" lean-forward="true" selection-start-column="59" selection-end-column="59" />
               </first_editor>
               <second_editor />
             </state>
@@ -180,10 +187,11 @@
         <option value="$PROJECT_DIR$/MachingLearningLab1/lib/mat_oper.py" />
         <option value="$PROJECT_DIR$/MachingLearningLab1/terminal.py" />
         <option value="$PROJECT_DIR$/MachingLearningLab1/README.MD" />
+        <option value="$PROJECT_DIR$/README.MD" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="676" />
     <option name="width" value="697" />
     <option name="height" value="775" />
@@ -218,17 +226,6 @@
             <path>
               <item name="python" type="b2602c69:ProjectViewProjectNode" />
               <item name="python" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python" type="462c0819:PsiDirectoryNode" />
-              <item name="MachingLearningLab1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python" type="462c0819:PsiDirectoryNode" />
-              <item name="MachingLearningLab1" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -541,6 +538,16 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="320">
             <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.MD">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="59" lean-forward="true" selection-start-column="59" selection-end-column="59" />
           </first_editor>
           <second_editor />
         </state>
