@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9b583873-1f6b-4ed7-b8b0-1c673e032719" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MachingLearningLab1/lib/by_analytic.py" beforeDir="false" afterPath="$PROJECT_DIR$/MachingLearningLab1/lib/by_analytic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MachingLearningLab1/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/MachingLearningLab1/README.MD" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MachingLearningLab1/lib/by_grad_decrease.py" beforeDir="false" afterPath="$PROJECT_DIR$/MachingLearningLab1/lib/by_grad_decrease.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MachingLearningLab1/lib/mat_oper.py" beforeDir="false" afterPath="$PROJECT_DIR$/MachingLearningLab1/lib/mat_oper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MachingLearningLab1/lib/sam_gen.py" beforeDir="false" afterPath="$PROJECT_DIR$/MachingLearningLab1/lib/sam_gen.py" afterDir="false" />
@@ -20,40 +20,41 @@
     <session id="1885608261">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="3" />
           <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="MD" value="569" />
+          <entry key="MD" value="799" />
           <entry key="Python Console" value="461" />
           <entry key="dummy" value="11" />
-          <entry key="py" value="15292" />
+          <entry key="py" value="17583" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="569" />
+          <entry key="Markdown" value="799" />
           <entry key="PLAIN_TEXT" value="11" />
-          <entry key="Python" value="15753" />
+          <entry key="Python" value="18044" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="MD" value="1" />
+          <entry key="MD" value="2" />
           <entry key="py" value="16" />
-          <entry key="txt" value="9" />
+          <entry key="txt" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="9" />
+          <entry key="Markdown" value="2" />
+          <entry key="PLAIN_TEXT" value="10" />
           <entry key="Python" value="16" />
         </counts>
       </usages-collector>
@@ -65,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MachingLearningLab1/lib/sam_gen.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="27" column="68" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
+            <state relative-caret-position="169">
+              <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
               <folding>
                 <element signature="n#!!doc" />
                 <element signature="e#166#184#0" expanded="true" />
@@ -75,11 +76,23 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MachingLearningLab1/README.MD">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="320">
+                <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MachingLearningLab1/lib/by_analytic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="40" column="72" selection-start-line="40" selection-start-column="72" selection-end-line="40" selection-end-column="72" />
+            <state relative-caret-position="207">
+              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
               <folding>
                 <marker date="1537673117714" expanded="true" signature="421:427" ph="..." />
                 <marker date="1537673117714" expanded="true" signature="421:446" ph="..." />
@@ -91,28 +104,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MachingLearningLab1/lib/by_grad_decrease.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1689">
-              <caret line="142" column="42" lean-forward="true" selection-start-line="142" selection-start-column="42" selection-end-line="142" selection-end-column="42" />
+            <state relative-caret-position="207">
+              <caret line="84" column="21" lean-forward="true" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
               <folding>
                 <element signature="e#87#108#0" expanded="true" />
-                <marker date="1537759577095" expanded="true" signature="940:946" ph="..." />
-                <marker date="1537759577095" expanded="false" signature="1057:2049" ph="..." />
-                <marker date="1537759577095" expanded="true" signature="1057:2071" ph="..." />
-                <marker date="1537759577095" expanded="true" signature="2219:2228" ph="..." />
+                <marker date="1537878504138" expanded="true" signature="985:986" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MachingLearningLab1/lib/mat_oper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="-1235">
+              <caret line="34" column="70" selection-start-line="34" selection-start-column="70" selection-end-line="34" selection-end-column="70" />
               <folding>
                 <element signature="e#215#251#0" expanded="true" />
-                <marker date="1537761317613" expanded="true" signature="1044:1049" ph="..." />
-                <marker date="1537761317613" expanded="true" signature="1598:1813" ph="..." />
+                <marker date="1537879100973" expanded="true" signature="1046:1051" ph="..." />
+                <marker date="1537879100973" expanded="true" signature="1600:1815" ph="..." />
+                <marker date="1537879100973" expanded="true" signature="3326:3500" ph="..." />
               </folding>
             </state>
           </provider>
@@ -121,13 +132,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MachingLearningLab1/terminal.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2">
-              <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
+            <state relative-caret-position="641">
+              <caret line="66" column="90" selection-start-line="66" selection-start-column="90" selection-end-line="66" selection-end-column="90" />
               <folding>
                 <element signature="e#66#97#0" expanded="true" />
-                <marker date="1537760138374" expanded="true" signature="514:652" ph="..." />
-                <marker date="1537760138374" expanded="true" signature="706:711" ph="..." />
-                <marker date="1537760138374" expanded="true" signature="1465:1470" ph="..." />
+                <marker date="1537879411255" expanded="true" signature="517:655" ph="..." />
+                <marker date="1537879411255" expanded="true" signature="709:714" ph="..." />
               </folding>
             </state>
           </provider>
@@ -145,6 +155,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>print</find>
+      <find>plt</find>
     </findStrings>
     <replaceStrings>
       <replace>obj</replace>
@@ -163,20 +174,19 @@
         <option value="$PROJECT_DIR$/MachingLearningLab1/mat_oper.py" />
         <option value="$PROJECT_DIR$/MachingLearningLab1/by_grad_decrease.py" />
         <option value="$PROJECT_DIR$/MachingLearningLab1/ternimal.py" />
-        <option value="$PROJECT_DIR$/MachingLearningLab1/README.MD" />
         <option value="$PROJECT_DIR$/MachingLearningLab1/lib/by_analytic.py" />
         <option value="$PROJECT_DIR$/MachingLearningLab1/lib/sam_gen.py" />
         <option value="$PROJECT_DIR$/MachingLearningLab1/lib/by_grad_decrease.py" />
-        <option value="$PROJECT_DIR$/MachingLearningLab1/terminal.py" />
         <option value="$PROJECT_DIR$/MachingLearningLab1/lib/mat_oper.py" />
+        <option value="$PROJECT_DIR$/MachingLearningLab1/terminal.py" />
+        <option value="$PROJECT_DIR$/MachingLearningLab1/README.MD" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-217" />
-    <option name="y" value="49" />
-    <option name="width" value="1346" />
-    <option name="height" value="728" />
+    <option name="x" value="676" />
+    <option name="width" value="697" />
+    <option name="height" value="775" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -201,6 +211,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -223,7 +234,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -386,12 +396,12 @@
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.3125" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3125" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32973805" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49925596" visible="true" weight="0.28197226" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49925596" visible="true" weight="0.2650231" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.37596303" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -465,38 +475,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MachingLearningLab1/README.MD">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="38">
-            <caret line="2" column="53" lean-forward="true" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MachingLearningLab1/train_sample.txt">
+    <entry file="file://$PROJECT_DIR$/MachingLearningLab1/lib/by_grad_decrease.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="18" selection-start-line="9" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MachingLearningLab1/lib/sam_gen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="27" column="68" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
+        <state relative-caret-position="207">
+          <caret line="84" column="21" lean-forward="true" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
           <folding>
-            <element signature="n#!!doc" />
-            <element signature="e#166#184#0" expanded="true" />
+            <element signature="e#87#108#0" expanded="true" />
+            <marker date="1537878504138" expanded="true" signature="985:986" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MachingLearningLab1/lib/by_analytic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="40" column="72" selection-start-line="40" selection-start-column="72" selection-end-line="40" selection-end-column="72" />
+        <state relative-caret-position="207">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
           <folding>
             <marker date="1537673117714" expanded="true" signature="421:427" ph="..." />
             <marker date="1537673117714" expanded="true" signature="421:446" ph="..." />
@@ -504,42 +497,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MachingLearningLab1/lib/by_grad_decrease.py">
+    <entry file="file://$PROJECT_DIR$/MachingLearningLab1/terminal.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1689">
-          <caret line="142" column="42" lean-forward="true" selection-start-line="142" selection-start-column="42" selection-end-line="142" selection-end-column="42" />
+        <state relative-caret-position="641">
+          <caret line="66" column="90" selection-start-line="66" selection-start-column="90" selection-end-line="66" selection-end-column="90" />
           <folding>
-            <element signature="e#87#108#0" expanded="true" />
-            <marker date="1537759577095" expanded="true" signature="940:946" ph="..." />
-            <marker date="1537759577095" expanded="false" signature="1057:2049" ph="..." />
-            <marker date="1537759577095" expanded="true" signature="1057:2071" ph="..." />
-            <marker date="1537759577095" expanded="true" signature="2219:2228" ph="..." />
+            <element signature="e#66#97#0" expanded="true" />
+            <marker date="1537879411255" expanded="true" signature="517:655" ph="..." />
+            <marker date="1537879411255" expanded="true" signature="709:714" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MachingLearningLab1/terminal.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="47" column="43" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
-          <folding>
-            <element signature="e#66#97#0" expanded="true" />
-            <marker date="1537760138374" expanded="true" signature="514:652" ph="..." />
-            <marker date="1537760138374" expanded="true" signature="706:711" ph="..." />
-            <marker date="1537760138374" expanded="true" signature="1465:1470" ph="..." />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/MachingLearningLab1/train_sample.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/MachingLearningLab1/lib/mat_oper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="-1235">
+          <caret line="34" column="70" selection-start-line="34" selection-start-column="70" selection-end-line="34" selection-end-column="70" />
           <folding>
             <element signature="e#215#251#0" expanded="true" />
-            <marker date="1537761317613" expanded="true" signature="1044:1049" ph="..." />
-            <marker date="1537761317613" expanded="true" signature="1598:1813" ph="..." />
+            <marker date="1537879100973" expanded="true" signature="1046:1051" ph="..." />
+            <marker date="1537879100973" expanded="true" signature="1600:1815" ph="..." />
+            <marker date="1537879100973" expanded="true" signature="3326:3500" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MachingLearningLab1/lib/sam_gen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+          <folding>
+            <element signature="n#!!doc" />
+            <element signature="e#166#184#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MachingLearningLab1/README.MD">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="320">
+            <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

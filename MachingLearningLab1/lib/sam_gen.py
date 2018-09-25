@@ -22,10 +22,10 @@ class SamGen(object):
     # 生成器，用于生成样本数据
     def _gen_sin2pix(self, size):
         np.random.seed(int(time()))
-        noi = np.random.randn(size)
-        ran_x = np.random.uniform(0, 2, size)
+        noi = np.random.normal(0, 0.1, size)
+        ran_x = np.random.uniform(-1, 1, size)
         for i in range(size):
-            yield ran_x[i], math.sin(2 * math.pi * (ran_x[i])) + noi
+            yield ran_x[i], math.sin(2 * math.pi * (ran_x[i])) + noi[i]
         return
 
     # 将生成的数据写入文件中

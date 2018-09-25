@@ -32,7 +32,7 @@ def data_deal(obj, file):
         obj.mat_x.append(row)
         obj.mat_t.append([float(temp[1])])
         temp_y.append(float(temp[1]))
-    p1 = plt.scatter(temp_x, temp_y, marker='x', color='g', label='1', s=30)
+    p1 = plt.scatter(temp_x, temp_y, marker='x', color='g', label='dot', s=30)
     fp.close()
     return
 
@@ -117,6 +117,24 @@ def mat_sum(x, y):
         for j in range(len(x[0])):
             m_sum[i].append(x[i][j] + y[i][j])
     return m_sum
+
+
+def mat_ext(mat, alpha):
+    ans = []
+    for i in range(len(mat)):
+        ans.append([])
+        for j in range(len(mat[i])):
+            ans[i].append(mat[i][j] * alpha)
+    return ans
+
+
+def mat_sub(mat1, mat2):
+    ans = []
+    for i in range(len(mat1)):
+        ans.append([])
+        for j in range(len(mat1[i])):
+            ans[i].append(mat1[i][j] - mat2[i][j])
+    return ans
 
 
 # 测试代码
