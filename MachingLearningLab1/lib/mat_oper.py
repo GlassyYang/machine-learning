@@ -33,6 +33,7 @@ def data_deal(obj, file):
         obj.mat_t.append([float(temp[1])])
         temp_y.append(float(temp[1]))
     p1 = plt.scatter(temp_x, temp_y, marker='x', color='g', label='dot', s=30)
+    plt.plot(x1, func(x1, w_a1), 'm', linewidth=1, label='func-without-reg')
     fp.close()
     return
 

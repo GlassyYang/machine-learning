@@ -4,10 +4,8 @@
     使用梯度下降法求出最优的参数，只考虑加上正则的情况。
 '''
 
-from math import fabs
 from MachingLearningLab1.lib import mat_oper
 import numpy as np
-import numpy.linalg as la
 
 
 class GradDecrease:
@@ -32,15 +30,26 @@ class GradDecrease:
             self.mat_t.append(float(temp[1]))
         return
 
-    # 过程中求出的函数h(x),参数为函数系数，返回在某一点的值
-    def _h_theta_x(self, omega, x):
-        ans = omega[0][0]
-        for i in range(1, len(omega)):
-            ans += omega[i][0] * x[i]
-        return ans
+    # 梯度下降法求出
+    def grad_decrease(self, accuracy, alpha, lamb):
+        w = np.zeros((self.dim, 1))
+        step = 0
+        x = np.array(self.mat_x)
+        t = np.array(self.mat_t)
+        while True:
+            temp = x.T @ (x @ w - t)
+            temp = (alpha / self.size) * (temp + lamb * w)
+            w -= temp
+            step += 1
+            print(step)
+            # print(w)
+            if np.array(np.fabs(temp)).sum() < accuracy:
+                print(w)
+                break
+        return w, step
 
-    # 通过梯度下降法求出最优值
-    def grad_decrease(self, accuracy, alpha, lamb):  # accuracy: 准确度，alpha：前面的项的系数，lambda：惩罚项的系数
+    # 随机梯度下降法求出最优值
+    def random_grad_decrease(self, accuracy, alpha, lamb):  # accuracy: 准确度，alpha：前面的项的系数，lambda：惩罚项的系数
         w = np.zeros((self.dim, 1))
         step = 0
         x = np.array(self.mat_x)
@@ -49,7 +58,7 @@ class GradDecrease:
         xtrx = xtr @ x
         xtrt = xtr @ t
         while True:
-            temp = alpha * (2 * xtrx @ w - 2 * xtrt + lamb * w)
+            temp = alpha * ((xtrx @ w - xtrt) * x + lamb * w)
             w = w - temp
             # 通过计算损失函数判断出终止条件
             temp = np.fabs(temp)
@@ -72,7 +81,6 @@ class GradDecrease:
         # 初始化开始时的变量
         r = np.array(b - mat_a @ w)
         p = r
-        # 注：k貌似没用
         k = 0
         # 算法的的循环过程
         while True:
@@ -83,11 +91,10 @@ class GradDecrease:
             lost = np.array(np.fabs(r_new)).sum()
             if lost < accuracy:
                 break
-            print(lost)
+            # print(lost)
             beta = (r_new.transpose() @ r_new) / (r.transpose() @ r)
             p = r_new + beta[0][0] * p
-            k = k + 1
             r = r_new
-            print(k)
-            print(w)
-        return w
+            k = k + 1
+            # print(w)
+        return w, k

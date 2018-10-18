@@ -39,9 +39,6 @@ class Analytic(object):
                 else:
                     mat_i[i].append(0)
         xtrx = mat_oper.mat_multi(mat_oper.mat_tran(self.mat_x), self.mat_x)
-        # for i in range(len(xtrx)):
-        #     for j in range(len(xtrx)):
-        #         xtrx[i][j] = xtrx[i][j] / self.size
         xtrt = mat_oper.mat_multi(mat_oper.mat_tran(self.mat_x), self.mat_t)
         inv = mat_oper.mat_inverse(mat_oper.mat_sum(mat_i, xtrx))
         w = mat_oper.mat_multi(inv, xtrt)
