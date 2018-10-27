@@ -7,7 +7,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from math import pi
-from MachingLearningLab1.lib import sam_gen as sg, by_grad_decrease as gd, by_analytic as anal
+from MachineLearningLab1.lib import sam_gen as sg, by_grad_decrease as gd, by_analytic as anal
 import re
 from math import fabs
 # 定义训练数据、验证数据和测试数据所在的文件

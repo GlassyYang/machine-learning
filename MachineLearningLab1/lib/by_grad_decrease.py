@@ -4,7 +4,7 @@
     使用梯度下降法求出最优的参数，只考虑加上正则的情况。
 '''
 
-from MachingLearningLab1.lib import mat_oper
+from MachineLearningLab1.lib import mat_oper
 import numpy as np
 
 

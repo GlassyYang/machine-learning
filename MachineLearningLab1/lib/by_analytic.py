@@ -3,7 +3,7 @@
 '''
     通过解析式直接求解得到参数，分为加正则和不加正则两种情况，参数的数量需要通过参数传递。
 '''
-from MachingLearningLab1.lib import mat_oper
+from MachineLearningLab1.lib import mat_oper
 
 
 # 使用解析式法直接接触最优的值
