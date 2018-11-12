@@ -1,7 +1,9 @@
 import numpy as np
 from matplotlib import pyplot as plt
+from math import exp, fabs
 from time import time
 from os.path import exists
+import xlrd
 file = 'data.txt'
 
 
@@ -26,6 +28,18 @@ def data_gen(dim, mu, sigma, length, file):
             line.append(str(gen[j][i]))
         lines.append(','.join(line) + '\n')
     file.writelines(lines)
+
+
+def data_read_xls(filename):
+    data = xlrd.open_workbook(filename)
+    table = data.sheet_by_name('Training_Data')
+    x = []
+    for i in range(1, table.nrows):
+        temp = []
+        for j in range(1, table.ncols - 4):
+            temp.append(float(table.cell(i, j).value))
+        x.append(temp)
+    return np.array(x)
 
 
 def min_dist(x, c):
@@ -126,7 +140,71 @@ def k_means(x, k):
             else:
                 del classify[i]
         del i
-    return classify
+    return classify, center
+
+
+def em_algorithm(x, k, acc):
+    """
+    使用em算法分类，初始化为K-算法的输出。
+    :param x:   样本点
+    :param k:   分类的类数
+    ":param acc: 算法退出的条件，当mu在每一轮中每一个元素的变化都小于这个值的时候，算法退出。
+    :return: 返回每一个类的参数mu，sigma，以及类别先验。
+    """
+    init, mu = k_means(x, k)
+    total = 0
+    for i in init:
+        total += len(i)
+    p = []
+    sigma = []
+    for i in range(len(init)):
+        p.append(len(init[i]) / total)
+        sigma.append(np.eye(len(x[0])))
+        mu[i] = np.array(mu[i]).T
+    py_x = []
+    for i in range(len(x)):
+        py_x.append([])
+        for j in range(len(mu)):
+            py_x[i].append(None)
+    while True:
+        # E-step
+        for i in range(len(py_x)):
+            for j in range(len(mu)):
+                py_x[i][j] = p[j] * exp(-(x[i] - mu[j]) @ np.linalg.inv(sigma[j]) @ (x[i] - mu[j]).T)
+        # m-step
+        mu_t = mu[0]
+        for i in range(len(mu)):
+            deno = 0
+            mol1 = np.zeros((1, len(x[0])))
+            mol2 = np.zeros((len(x[0]), len(x[0])))
+            for j in range(len(py_x)):
+                deno += py_x[j][i]
+                mol1 += py_x[j][i] * x[j]
+                mol2 += py_x[j][i] * (x[j] - mu[i]).T @ (x[j] - mu[i])
+            mu[i] = mol1 / deno
+            sigma[i] = mol2 / deno
+            p[i] = deno / len(x)
+        count = 0
+        for i in range(len(mu_t[0])):
+            if fabs(mu_t[0][i] - mu[0][0][i]) < acc:
+                count += 1
+        # 算法的退出条件
+        if count == len(mu_t):
+            break
+    # 利用最后得到的概率进行聚类：
+    x_class = []
+    for i in range(len(mu)):
+        x_class.append([])
+    for i in range(len(x)):
+        maxa = -2
+        maxi = -1
+        for j in range(len(mu)):
+            temp = p[j] * exp(-(x[i] - mu[j]) @ np.linalg.inv(sigma[j]) @ (x[i] - mu[j]).T)
+            if temp >= maxa:
+                maxa = temp
+                maxi = j
+        x_class[maxi].append(x[i])
+    return p, mu, sigma, x_class
 
 
 def show(cla):
@@ -171,6 +249,8 @@ def data_read(filename):
 
 
 def main():
+    print("menu:\n1.use k-means algorithm\n2.use EM algorithm\ninput a number, 1 or 2")
+    com = input(">>>")
     global file
     if not exists(file):
         mu_0 = [3, 3]
@@ -188,9 +268,102 @@ def main():
             data_gen(2, mu_3, sigma_3, 11, f)
     x = data_read(file)
     show([x])
-    cla = k_means(x, 4)
-    show(cla)
+    if com == '1':
+        x_class, mu = k_means(x, 4)
+        show(x_class)
+    elif com == '2':
+        cla, center, s, x_class = em_algorithm(x, 4, 0.04)
+        show(x_class)
+
+
+def diff(filename, x_class):
+    """
+    输出一个表格，比较iris.data和分类之后的类别中样本点的数量；
+    :param filename: 带标签的iris.data数据集
+    :param x_class: 由分类算法生成的类
+    :return: None
+    """
+    number = {
+        'Iris-setosa': 0,
+        'Iris-versicolor': 0,
+        'Iris-virginica': 0
+    }
+    with open(filename, 'r') as f:
+        data = f.read()
+        lines = data.split('\n')
+        lines.pop()
+    for i in lines:
+        number[i[(i.rfind(',') + 1):len(i)]] += 1
+    print('\nresults on data set:')
+    print('-------------------------------------')
+    print('|', end='')
+    for i in number.keys():
+        print(i + '\t|', end='')
+    print()
+    print('|', end='')
+    for i in number.keys():
+        print(str(number[i]) + '\t\t|', end='')
+    print()
+    print('-------------------------------------')
+    print('results by classify algorithm:')
+    print('-------------------------------------')
+    for i in range(len(x_class)):
+        print(str(len(x_class[i])) + '\t\t|', end='')
+
+
+def diff_xls(filename, x_class):
+    """
+    输出一个表格，比较远样本标签和分类之后样本中类数量的区别
+    :param filename: 带标签的样本数据
+    :param x_class: 有分类算法分得的类
+    :return: NNone
+    """
+    data = xlrd.open_workbook(filename)
+    number = {
+        'very_low': 0,
+        'Low': 0,
+        'Middle': 0,
+        'High': 0
+    }
+    sheet = data.sheet_by_name("Training_Data")
+    for i in range(1, sheet.nrows):
+        number[sheet.cell(i, 5).value] += 1
+    print('results on xls data set:')
+    print('-------------------------------------')
+    print('|', end='')
+    for i in number.keys():
+        print(i + '\t|', end='')
+    print()
+    print('|', end='')
+    for i in number.keys():
+        print(str(number[i]) + '\t\t|', end='')
+    print()
+    print('-------------------------------------')
+    print('results by classify algorithm:')
+    print('-------------------------------------')
+    for i in range(len(x_class)):
+        print(str(len(x_class[i])) + '\t\t|', end='')
+
+
+def run_uci():
+    print('use the xls data set:')
+    print('result by k-means algorithm:')
+    x = data_read_xls('Data_User_Modeling_Dataset_Hamdi Tolga KAHRAMAN.xls')
+    x_class, mu = k_means(x, 4)
+    diff_xls('Data_User_Modeling_Dataset_Hamdi Tolga KAHRAMAN.xls', x_class)
+    p, mu, sigma, x_class = em_algorithm(x, 4, 0.01)
+    print('\nresult by EM algorithm:')
+    diff_xls('Data_User_Modeling_Dataset_Hamdi Tolga KAHRAMAN.xls', x_class)
+    print("use the second data set:")
+    x = data_read('iris_no_label.data')
+    x_class, mu = k_means(x, 3)
+    diff('iris.data', x_class)
+    p, mu, sigma, x_class = em_algorithm(x, 3, 0.005)
+    diff('iris.data', x_class)
 
 
 if __name__ == '__main__':
-    main()
+    # 在测试数据集上跑的结果
+    # main()
+    # 在uci数据集上跑的结果
+    run_uci()
